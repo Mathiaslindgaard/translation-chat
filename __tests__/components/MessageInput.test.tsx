@@ -10,9 +10,9 @@ test('shows Danish placeholder for mathias', () => {
   expect(screen.getByPlaceholderText('Skriv en besked...')).toBeInTheDocument()
 })
 
-test('shows Ukrainian placeholder for katya', () => {
+test('shows Ukrainian placeholder for ira', () => {
   render(
-    <MessageInput currentUser="katya" onSend={noop} onTyping={noop} isLoading={false} />
+    <MessageInput currentUser="ira" onSend={noop} onTyping={noop} isLoading={false} />
   )
   expect(screen.getByPlaceholderText('Написати повідомлення...')).toBeInTheDocument()
 })

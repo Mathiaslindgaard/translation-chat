@@ -12,7 +12,7 @@ interface MessageInputProps {
 
 const PLACEHOLDERS: Record<UserId, string> = {
   mathias: 'Skriv en besked...',
-  katya: 'Написати повідомлення...',
+  ira: 'Написати повідомлення...',
 }
 
 export function MessageInput({ currentUser, onSend, onTyping, isLoading }: MessageInputProps) {

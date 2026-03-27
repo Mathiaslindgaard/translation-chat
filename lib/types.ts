@@ -1,4 +1,4 @@
-export type UserId = 'mathias' | 'katya'
+export type UserId = 'mathias' | 'ira'
 
 export type Message = {
   id: string

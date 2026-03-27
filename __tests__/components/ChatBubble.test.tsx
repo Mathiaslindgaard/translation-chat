@@ -10,9 +10,9 @@ const mathiasMessage: Message = {
   timestamp: new Date('2026-01-01T14:23:00').getTime(),
 }
 
-const katyaMessage: Message = {
+const iraMessage: Message = {
   id: '2',
-  sender: 'katya',
+  sender: 'ira',
   originalText: 'Як справи?',
   translatedText: 'How are you?',
   timestamp: new Date('2026-01-01T14:24:00').getTime(),
@@ -25,7 +25,7 @@ test('own message shows original as primary and translation as secondary', () =>
 })
 
 test("other's message shows translation as primary and original as secondary", () => {
-  render(<ChatBubble message={katyaMessage} currentUser="mathias" />)
+  render(<ChatBubble message={iraMessage} currentUser="mathias" />)
   expect(screen.getByText('How are you?')).toBeInTheDocument()
   expect(screen.getByText('Як справи?')).toBeInTheDocument()
 })
@@ -40,7 +40,7 @@ test('own message container is right-aligned', () => {
 
 test("other's message container is left-aligned", () => {
   const { container } = render(
-    <ChatBubble message={katyaMessage} currentUser="mathias" />
+    <ChatBubble message={iraMessage} currentUser="mathias" />
   )
   const wrapper = container.firstChild as HTMLElement
   expect(wrapper.className).toMatch(/justify-start/)

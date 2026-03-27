@@ -22,7 +22,7 @@ export function ChatBubble({ message, currentUser }: ChatBubbleProps) {
     <div className={`flex mb-3 ${isOwn ? 'justify-end' : 'justify-start gap-2'}`}>
       {!isOwn && (
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-amber-600 flex items-center justify-center text-white text-xs font-bold flex-shrink-0 self-end">
-          {message.sender === 'katya' ? 'K' : 'M'}
+          {message.sender === 'ira' ? 'K' : 'M'}
         </div>
       )}
       <div className="max-w-[75%]">

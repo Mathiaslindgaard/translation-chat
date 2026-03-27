@@ -22,10 +22,10 @@ function IdentitySelector({ onSelect }: { onSelect: (user: UserId) => void }) {
           Mathias
         </button>
         <button
-          onClick={() => onSelect('katya')}
+          onClick={() => onSelect('ira')}
           className="flex-1 py-3 rounded-2xl bg-gradient-to-br from-yellow-400 to-amber-500 text-white font-semibold hover:opacity-90 transition-opacity active:scale-95"
         >
-          Katya
+          Ira
         </button>
       </div>
     </div>
@@ -33,8 +33,8 @@ function IdentitySelector({ onSelect }: { onSelect: (user: UserId) => void }) {
 }
 
 const OTHER_NAME: Record<UserId, string> = {
-  mathias: 'Katya',
-  katya: 'Mathias',
+  mathias: 'Ira',
+  ira: 'Mathias',
 }
 
 export default function ChatPage() {
@@ -51,7 +51,7 @@ export default function ChatPage() {
     const urlUser = params.get('user') as UserId | null
     const stored = localStorage.getItem('chatUser') as UserId | null
     const user = urlUser || stored
-    if (user === 'mathias' || user === 'katya') {
+    if (user === 'mathias' || user === 'ira') {
       setCurrentUser(user)
       localStorage.setItem('chatUser', user)
     }
