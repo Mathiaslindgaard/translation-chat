@@ -8,8 +8,8 @@ import { Message, UserId } from '@/lib/types'
 export async function POST(req: NextRequest) {
   const { sender, text }: { sender: UserId; text: string } = await req.json()
 
-  const from = sender === 'mathias' ? 'Danish' : 'Ukrainian'
-  const to = sender === 'mathias' ? 'Ukrainian' : 'Danish'
+  const from = sender === 'mathias' ? 'English' : 'Russian'
+  const to = sender === 'mathias' ? 'Russian' : 'English'
 
   const translatedText = await translateMessage(text, from, to)
 

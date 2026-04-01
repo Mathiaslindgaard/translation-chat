@@ -3,18 +3,18 @@ import { MessageInput } from '@/components/MessageInput'
 
 const noop = () => {}
 
-test('shows Danish placeholder for mathias', () => {
+test('shows English placeholder for mathias', () => {
   render(
     <MessageInput currentUser="mathias" onSend={noop} onTyping={noop} isLoading={false} />
   )
-  expect(screen.getByPlaceholderText('Skriv en besked...')).toBeInTheDocument()
+  expect(screen.getByPlaceholderText('Write a message...')).toBeInTheDocument()
 })
 
-test('shows Ukrainian placeholder for ira', () => {
+test('shows Russian placeholder for ira', () => {
   render(
     <MessageInput currentUser="ira" onSend={noop} onTyping={noop} isLoading={false} />
   )
-  expect(screen.getByPlaceholderText('Написати повідомлення...')).toBeInTheDocument()
+  expect(screen.getByPlaceholderText('Написать сообщение...')).toBeInTheDocument()
 })
 
 test('send button is disabled when input is empty', () => {

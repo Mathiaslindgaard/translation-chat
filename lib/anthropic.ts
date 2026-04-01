@@ -9,8 +9,8 @@ const SYSTEM_PROMPT =
 
 export async function translateMessage(
   text: string,
-  from: 'Danish' | 'Ukrainian',
-  to: 'Danish' | 'Ukrainian'
+  from: 'English' | 'Russian',
+  to: 'English' | 'Russian'
 ): Promise<string> {
   const response = await client.messages.create({
     model: 'claude-haiku-4-5-20251001',

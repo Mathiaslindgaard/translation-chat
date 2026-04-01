@@ -6,14 +6,14 @@ const mathiasMessage: Message = {
   id: '1',
   sender: 'mathias',
   originalText: 'Hej',
-  translatedText: 'Привіт',
+  translatedText: 'Привет',
   timestamp: new Date('2026-01-01T14:23:00').getTime(),
 }
 
 const iraMessage: Message = {
   id: '2',
   sender: 'ira',
-  originalText: 'Як справи?',
+  originalText: 'Как дела?',
   translatedText: 'How are you?',
   timestamp: new Date('2026-01-01T14:24:00').getTime(),
 }
@@ -21,13 +21,13 @@ const iraMessage: Message = {
 test('own message shows original as primary and translation as secondary', () => {
   render(<ChatBubble message={mathiasMessage} currentUser="mathias" />)
   expect(screen.getByText('Hej')).toBeInTheDocument()
-  expect(screen.getByText('Привіт')).toBeInTheDocument()
+  expect(screen.getByText('Привет')).toBeInTheDocument()
 })
 
 test("other's message shows translation as primary and original as secondary", () => {
   render(<ChatBubble message={iraMessage} currentUser="mathias" />)
   expect(screen.getByText('How are you?')).toBeInTheDocument()
-  expect(screen.getByText('Як справи?')).toBeInTheDocument()
+  expect(screen.getByText('Как дела?')).toBeInTheDocument()
 })
 
 test('own message container is right-aligned', () => {
